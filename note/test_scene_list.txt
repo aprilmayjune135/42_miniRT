@@ -1,0 +1,16 @@
+- (done) 5 simple shapes (with variable norms) + multiple lights
+- (done) inside objects
+- colored light
+- declared resolution bigger than the current display resolution
+- bonus
+	- (done) Overall (wave / checkered / rainbow) + directional light + cube + pyramid + cylinder cap + cone + sphere checkered (texture mappinng)
+	- (done) Effect
+	- (done) bump
+	- (done) color filter
+
+
+- Error checking
+	- Resolution / Ambient more than once
+	- Essential info missing (Resolution / Ambient / Camera)
+	- extra character in the line.
+	- out of scope input (normal outside [-1,1], size < 0, color outside [0,255])

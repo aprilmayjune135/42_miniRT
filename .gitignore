@@ -1,0 +1,7 @@
+*.bmp
+*.dylib
+*.out
+*.o
+.vscode
+minirt
+image.bmp

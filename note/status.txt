@@ -1,0 +1,107 @@
+2021-03-16
+
+>> Current update:
+(done) - correct exit with segmentation fault 
+(done) - --save must exit
+(done) - display if one H/W exceed, just change to computer display resolution
+(done) - go through evaluation sheet one by one
+
+2nd submission ready.
+
+>> Next step:
+
+>> HouseKeeping before submit
+- delete all .o file
+- take out execution file / .bmp file 
+- restore Makefile for mlx.dylib
+- delete file + all header of "other_check"
+- double check on any 'printf'
+- double check on segmentation fault
+
+>> To note:
+- in trace(), whenever involved light_direction, remember to check whether use unit_vector or not.
+- figure out light intensity (1 / 4 * pi * distance to light square)
+
+
+###########################################################################
+WORK JOURNAL
+###########################################################################
+02-25 (Thur)
+- obj list
+- improve scene struct (incl. mlx variables)
+- camera switch/rotation/translation
+
+02-26 (Fri)
+- checkboard pattern
+- improve struct on tr to save calculation in run-time (pre-store info)
+
+03-01 (Mon)
+- wave effect
+- rainbow effect
+- cone
+
+03-02(Tue)
+- fixed cylinder >> m_rotation function changed: 1) if degree is zero(old and new is the same, then return unit_matrix; 2) if degree is 180, then return reverse matrix; 3) otherwise, set the axis to unit_vector.
+- improved camera-screen rotation (involve m_rotation function).
+
+03-03(Wed)
+- cube (with flexible normal)
+- pyramid (with flexible normal)
+- improved struct t_obj (put all pre-processed information into t_storage)
+
+03-04(Thur)
+- build checker pattern for all shape (incl. sp)
+- improved obj stucture - add t_texture and checker (grid side) in storage 
+- consolidated in the parsing section:
+	- read_effect
+	- process_obj
+- defined obj_shape in header file to prevent future mis-update
+- improved hit_any function. now calculate all hit related info at the end of the function (avoid unnecessary calculation if ray traced multiple objs)
+- fixed cy/co inside intersection
+
+03-05(Fri)
+- fixed cb/pr (all) inside intersection
+- corrected co hit->normal_out(previously used the same as cy which is not correct)
+
+03-09 (Tue)
+- change the process of light brightness to be applied directly in parsing section (calculated in light color)
+- combined diffuse and specular color function (before seperate go through lights list, now all together)
+- surface color function only need hit instead of pointer to hit, changed that.
+- added directional light
+- fixed cube normal (before convert phit to local, now use new_ray to calculate phit)
+- added color filter
+- added error checking for essention info on .rt file (Resolution/Ambient Light/Camera)
+
+03-10 (Wed)
+- study light & color for digital image 
+- study bmp file
+
+03-11 (Thur)
+- create bmp.c successfully
+- cancelled hook_loop
+- mouse hook camera rotation done!
+
+03-12 (Fri)
+- bump map texture works!!!
+
+03-13 (Sat)
+- re-intall norminette (change PATH)
+- review subject requirement
+- review norminette for all files
+
+03-15 (Mon)
+- multi-thread done
+- makefile incl. bonus rule
+- improve camera rotation/translation (now it is relative to current camera)
+- correct triangle intersection (tr_intersect_check to return 0 instead of -1)
+- build test scene
+
+03-16 (Tue)
+[1st Eval] failed due to segmentation fault on incorrect rt file:
+- correct exit with segmentation fault 
+- --save must exit
+- display if one H/W exceed, just change to computer display resolution
+- go through evaluation sheet one by one
+- build more scenes based on eval sheet.
+
+###########################################################################

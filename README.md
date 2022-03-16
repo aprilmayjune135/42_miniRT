@@ -5,7 +5,7 @@ This school project is a `ray tracing` rendering program (using school library `
 ## Features
 * This project is written in `C` (based on school requirement).
 * Based on scene input _(image size, object/camera position and etc., see [here](#scene-input-file))_, this program will open a window and render the image.
-* Keyboard and mouse interactivity are implemented:
+* Keyboard and mouse interactivity are implemented to change viewer perspective.
 * Following basic shapes are implemented:<br />
     `Plane` | `Sphere` | `Cylinder` | `Square` | `Triangle` | `Cube` | `Pyramid` | `Cone`
 * Following effects are implemented:<br />
@@ -33,7 +33,7 @@ This program will render image in a window from a valid scene input file. The re
 * Pre-existing scene files can be found under directory `scene` _(no need to add `./scene/` for these files when passing as an argument)_.
 
 ### Window Interactivity
-It is possible to interactive with the scene through keyboard and mouse:
+It is possible to change the viewer perspective in the scene through keyboard and mouse:
 * Move viewer perspective from keyboard:
   * up: ⬆️ or `w`
   * down: ⬇️ or `s`
